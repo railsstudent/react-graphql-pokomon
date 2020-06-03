@@ -1,18 +1,10 @@
 import React, { Component } from 'react';
 
-export class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      name: 'Angular'
-    };
-  }
-
-  render() {
-    return (
+export function App() {
+  const name = 'React'
+  return (
       <div>
-        <p>Hello {this.state.name}</p>
+        <p>Hello {name}</p>
       </div>
-    );
-  }
+  )
 }
