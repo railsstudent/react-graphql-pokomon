@@ -2,10 +2,15 @@ import React from 'react'
 
 export default function Pokemon({ pokemon }) {
   console.log('pokemon', pokemon)
+
+  const styles = {
+    width: '100%'
+  }
+
   return (
     <div className="pokemon">
       <div className="pokemon__name">
-        {pokemon.name}
+        {pokemon.name} ({pokemon.classification})
       </div>
       <div className="pokemon__meta">
         <span>{pokemon.maxHP}</span>
@@ -22,6 +27,13 @@ export default function Pokemon({ pokemon }) {
         }
       </div>
 
+      <div className="pokemon__fast">
+        { 
+          pokemon.attacks.fast.slice(0, 2).map(fast => 
+            <span key={`${fast.name}-${fast.damage}`}>{fast.name}</span>
+          )
+        }
+      </div>
     </div>
   )
 }

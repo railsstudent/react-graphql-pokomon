@@ -5,7 +5,7 @@ import PokemonsContainer from './containers/PokemonsContainer';
 
 // console.log('PokemonsContainer', PokemonsContainer)
 
-export function App() {
+export default function App() {
   const client = new ApolloClient({
     uri: 'https://graphql-pokemon.now.sh'
   });
