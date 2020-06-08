@@ -71,11 +71,11 @@ body {
     display: flex;
     padding-left: 10px;
     padding-right: 10px;
-    /* justify-content: space-between; */
+    justify-content: space-between;
 }
 
 .container .pokemon__attacks span, .container .pokemon__fast span {
-    flex: 0 1 calc(100% / 3);
+    width: 30%;
     background-color: #f16820;
     border-radius: 3px;
     padding: 7px;
@@ -90,6 +90,10 @@ body {
     line-height: 15px;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.container .pokemon__fast span  {
+  background-color: #f13820;
 }
 
 .container .pokemon__meta {
@@ -98,24 +102,6 @@ body {
     margin-top: 10px;
     padding: 0 10px;
 }
-
-/* .container .pokemon__fast span {
-    flex: 0 1 30%;
-    background-color: #f16820;
-    border-radius: 3px;
-    padding: 7px;
-    font-weight: 700;
-    color: #fff;
-    padding-left: 10px;
-    padding-right: 10px;
-    font-size: 12px;
-    margin-bottom: 10px;
-    word-wrap: break-word;
-    text-align: center;
-    line-height: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
-} */
 
 .container .pokemon__meta span {
     color: white;
@@ -127,6 +113,13 @@ body {
     border-radius: 5px;
 }
 
+.container .pokemon__attacks__title, .container .pokemon__fast__title {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+}
+
 @media (max-width: 800px) {
     .container .pokemon {
         width: 100%;
@@ -134,12 +127,13 @@ body {
 }
 
 @media (max-width: 400px) {
-    .container .pokemon__attacks, .container .pokemon__meta {
+    .container .pokemon__attacks, .container .pokemon__fast, .container .pokemon__meta {
         flex-wrap: wrap;
     }
     
     .container .pokemon__meta span,
     .container .pokemon__attacks span,
+    .container .pokemon__fast span,
     .container .pokemon {
         width: 100%;
     }
