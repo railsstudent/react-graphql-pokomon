@@ -1,11 +1,8 @@
 import React from 'react'
+import PokemonAttacks from './Pokemon-Attacks'
 
 export default function Pokemon({ pokemon }) {
   console.log('pokemon', pokemon)
-
-  const styles = {
-    width: '100%'
-  }
 
   return (
     <div className="pokemon">
@@ -41,6 +38,8 @@ export default function Pokemon({ pokemon }) {
           )
         }
       </div>
+
+      <PokemonAttacks pokemon={pokemon} />
     </div>
   )
 }
