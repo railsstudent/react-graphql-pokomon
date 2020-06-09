@@ -8,6 +8,7 @@ export const GET_POKEMONS = gql`
         image
         maxHP
         maxCP
+        fleeRate
         classification
         attacks {
             special {
